@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Aboreto';
+    color: rgb(132, 97, 8);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+}
+header nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    transition: all 0.5s linear;
+}
+header nav a:hover {
+    background-color: goldenrod;
+    color: white;
+
+}
+header nav img {
+    width: 170px;
+    margin-bottom: 5px;
+}
+#menumovel {
+    align-self: flex-end;
+    margin-right: 30px;
+    position: fixed;
+    bottom: 5%;
+}
+#menumovel img {
+    width: 50px;
+}
+#menumovel img:hover {
+    width: 55px;
+}
+
+.container {
+    background-image: url('../images/background.jpg');
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    background-color: beige;
+    border: 2px solid goldenrod;
+    padding: 30px;
+}
+.container .photo {
+    width: 400px;
+    border: 5px solid goldenrod;
+    margin-bottom: 40px;
+}
+.container .g_image {
+    width: 170px;
+}
+
+.container h1 {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container h2 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/*QUOTES*/
+.container_quote {
+    padding: 20px;
+    text-align: justify;
+}
+.container_quote q {
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 2px 2px 3px goldenrod;
+}
+
+/*BIOGRAFIA*/
+section {
+    display: flex;
+    justify-content: center;
+}
+.biografia {
+    flex-direction: column;
+}
+.b_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+}
+.title {
+    font-size: 30px;
+    width: inherit;
+    border-bottom: 1px solid goldenrod;
+    text-align: center;
+}
+.b_text {
+    margin-right: 20px;
+    text-align: justify;
+}
+.b_image {
+    background-color: goldenrod;
+    text-align: center;
+}
+.b_image p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: white;
+}
+.b_image img {
+    width: 300px;
+    border: 5px solid goldenrod;
+}
+
+
+/*DESPERTAR*/
+.margin {
+    margin: 0;
+    margin-left: 20px;
+}
+
+/*ENSINAMENTOS*/
+.b_text dd {
+    font-size: 20px;
+}
+.b_text ol li {
+    list-style-type: decimal-leading-zero;
+}
+.b_text ol {
+    margin-bottom: 0;
+}
+
+/*LIVROS*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.b_text .livros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 5px solid goldenrod;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    text-shadow: 2px 2px 3px goldenrod;
+}
+.b_text .livros img {
+    width: 150px;
+    margin: 10px;
+    box-shadow: 3px 3px 3px goldenrod;
+    opacity: 0.5;
+}
+.b_text .livros img:hover {
+    width: 160px;
+    opacity: 1;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    padding: 10px;
+    background-size: auto;
+    justify-content: center;
+}
+#footer_text {
+    font-size: 12px;
+    font-weight: lighter ;
+}
+#footer_text a {
+    text-decoration: none;
+}
+#footer_text a:hover {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/*RESPONSIVIDADE*/
+@media (max-width:1200px) {
+    .container {
+        width: 824px;
+        background-size: cover;
+    }
+    .b_text {
+        font-size: 13px;
+    }
+    .container_quote q{
+        font-size: 24px;
+    }
+    .b_image p {
+        width: 200px;
+        font-size: 13px;
+    }
+    .b_image img {
+        width: 200px;
+    }
+    #menumovel img {
+        width: 40px;
+    }
+    #menumovel img:hover {
+        width: 45px;
+    }
+}
+
+@media (max-width:1000px) {
+    .container {
+        width: calc(100% - 100px);
+    }
+    .b_text {
+        font-size: 12px;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .container_quote q{
+        font-size: 20px;
+    }
+    .b_image p {
+        width: 150px;
+        font-size: 12px;
+    }
+    .b_image img {
+        width: 150px;
+    }
+    .b_content {
+        flex-direction: column;
+        margin: 0;
+    }
+    .b_image {
+        margin-top: 10px;
+    }
+    .b_text .livros {
+        width: 200px;
+        height: 200px;
+        font-size: 12px;
+    }
+    .b_text .livros img {
+        width: 90px
+    }
+    .b_text .livros img:hover {
+        width: 100px;
+    }
+    #menumovel img {
+        width: 30px;
+    }
+    #menumovel img:hover {
+        width: 35px;
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .b_text {
+        font-size: 9px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .container_quote {
+        padding: 8px;
+    }
+    .container_quote q{
+        font-size: 10px;
+    }
+    .b_image {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .b_image p {
+        width: 90px;
+        font-size: 9px;
+        margin: 2px;
+        align-self: center;
+    }
+    .b_image img {
+        width: 100px;
+        border: 1px solid goldenrod;
+    }
+    .b_content {
+        flex-direction: column;
+        margin: 0;
+    }
+    .b_text .livros {
+        width: 100px;
+        height: 100px;
+        font-size: 9px;
+        text-align: center;
+        border: 2px solid goldenrod;
+    }
+    .b_text .livros img {
+        width: 40px;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+    .b_text .livros img:hover {
+        width: 50px;
+    }
+    #menumovel img {
+        width: 15px;
+        margin-right: 0px;
+        bottom: 2%;
+    }
+    #menumovel img:hover {
+        width: 18px;
+    }
+    .container .title {
+        font-size: 15px;
+    }
+    .b_text dd {
+        font-size: 11px;
+        text-align: start;
+    }
+    #menu img {
+        width: 30px;
+    }
+    #menu a {
+        font-size: 10.5px;
+        padding: 3px;
+    }
+    #home .g_image {
+        width: 80px;
+    }
+    #home h2 {
+        font-size: 11px;
+    }
+    #home h1 {
+        font-size: 15px;
+    }
+    #home .photo {
+        width: inherit;
+        margin-bottom: 20px;
+    }
+    .b_text ol {
+        margin: 0;
+        text-align: left;
+    }
+    .footer {
+        padding: 5px;
+    }
+    #footer_text {
+        font-size: 8px;
+        font-weight: lighter ;
+    }
+    #footer_text a {
+        text-decoration: none;
+    }
+    #footer_text a:hover {
+        font-size: 8px;
+        font-weight: bold;
+    }
+}
